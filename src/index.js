@@ -1,5 +1,8 @@
 const express = require("express");
+const cors = require("cors");
+
 const app = express();
+app.use(cors('{"origin": "/.codesandbox.io$/", "methods": "GET"}'));
 
 const http = require("http");
 const server = http.createServer(app);
